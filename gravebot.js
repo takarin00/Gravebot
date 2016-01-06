@@ -149,6 +149,11 @@ var commands = {
 			bot.sendFile(msg.channel, "./images/Feelsgoodman.png");
 		}
 	},
+	"feelsbadman": {
+		process: function(bot, msg) {
+			bot.sendFile(msg.channel, "./images/Feelsbadman.png");
+		}
+	},
 	"gif": {
 		process: function(bot, msg, suffix) {
 			var query = suffix;
@@ -534,75 +539,6 @@ var helpother = multiline(function() {/*
 **`!starwars5`**
 */});
 
-var aide = multiline(function() {/*
-**`!aide fun`**
-				Liste de commandes amusantes
-**`!aide utile`**
-				Liste de commandes utiles
-**`!aide info`**
-				Liste de commandes d'information
-**`!aide jeux`**
-				Liste des commandes de jeux
-**`!aide autres`**
-				Liste des autres commandes
-**`!help`**
-				List of commands
-**`!memelist`**
-				Liste des "meme" pour la commande !meme
-*/});
-
-var aidefun = multiline(function() {/*
-**`!8ball`** `question`
-				Répond à la question
-**`!chat`** `phrase`
-				Discute avec toi
-**`!coin`**
-				Lance une pièce
-**`!decide`** `quelque chose` **`or`** `quelque chose...`
-				Choisissez entre les mots donnés
-**`!drama`**
-				Renvoi une image dramatique aléatoire
-**`!meme`** `noms du meme` `"texte haut"` `"texte bas"`
-				Crée un « meme » avec le texte choisis
-**`!quote`**
-				Ecrit une citation aléatoire
-**`!roll`** `fois` `côtés`
-				Fait rouler un certain nombre de fois un dé avec un nombre de faces
-**`!snoopify`** `phrase`
-				Snoopifies la phrase
-*/});
-
-var aideutile = multiline(function() {/*
-**`!gif`** `tags du gifs`
-				Retourne un gif correspondant aux tags
-**`!join`** `lien d'invitation`
-				Rejoint le serveur auquel le bot est invité
-**`!urban`** `mots de la recherche`
-				Retourne la première définition de Urban Dictionary correspondant aux tags
-**`!wiki`** `mots de la recherche`
-				Retourne un résumé de la page Wikipedia correspondant aux tags
-**`!youtube`** `tags de la vidéo`
-				Retourne la vidéo youtube correspondant aux tags
-*/});
-
-var aideinfo = multiline(function() {/*
-**`!avatar`** `@username`
-				Retourne l'avatar de l'utilisateur, si aucun noms d'utilisateur est spécifié, votre avatar
-**`!serverinfo`**
-				Donne les infos du serveur
-**`!serverlist`**
-				Liste tous les serveurs auquel le bot est connecté
-**`!servers`**
-				Liste le nombre de serveurs, canaux et utilisateurs auquels le bots est connecté
-**`!uptime`**
-				Affiche la durée du bot en ligne
-**`!userinfo`** `@username`
-				Donne des informations à propose de l'utilisateur
-*/});
-
-var aidejeux = multiline(function() {/*
-**`Coming Soon`**:tm:
-*/});
 
 var memelist = multiline(function() {/*
 Meme names for the !meme command
