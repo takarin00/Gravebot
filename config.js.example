@@ -1,0 +1,30 @@
+export default {
+  // *Required* Prefix for commands.
+  PREFIX: '!',
+
+  // *Required* Discord email and password for your bot.
+  EMAIL: '',
+  PASSWORD: '',
+
+  // Youtube API key to be used when searching youtube videos.
+  // Learn more here. https://developers.google.com/youtube/v3/getting-started
+  YOUTUBE_API_KEY: '',
+
+  // Imgflip username and password, used for creating memes.
+  // Create an account here. https://imgflip.com
+  IMGFLIP_USERNAME: '',
+  IMGFLIP_PASSWORD: '',
+
+  // Cleverbot API name and key, used for talking with Cleverbot.
+  // Create a key here. https://cleverbot.io/keys
+  CLEVERBOT_API_NAME: '',
+  CLEVERBOT_API_KEY: '',
+
+  // Champion.gg API key is used for the League of Legends `!lol` commands.
+  // Create a key here. http://api.champion.gg/
+  CHAMPIONGG_API: '',
+
+  // Wolfram Alpha. Ask it anything.
+  // http://products.wolframalpha.com/developers/
+  WOLFRAM_KEY: ''
+};

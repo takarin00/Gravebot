@@ -1,26 +1,63 @@
 {
   "name": "gravebot",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A bot for the chat program Discord",
-  "main": "gravebot.js",
+  "main": "index.js",
   "dependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015-node4": "^2.0.2",
+    "bluebird": "^3.1.1",
+    "chalk": "^1.1.1",
+    "cheerio": "^0.19.0",
     "cleverbot.io": "^1.0.4",
-    "discord.js": "^5.1.0",
+    "discord.js": "^5.3.2",
+    "express": "^4.13.3",
+    "forever": "^0.15.1",
     "gizoogle": "^0.0.6",
+    "glob": "^6.0.3",
     "imgflipper": "^1.0.1",
-    "multiline": "^1.0.2",
-    "querystring": "^0.2.0",
+    "moment": "^2.11.0",
+    "nconf": "^0.8.2",
+    "ramda": "^0.19.0",
     "request": "^2.67.0",
     "urban": "^0.3.0",
     "wikijs": "^0.1.1",
+    "wolfram-alpha": "^0.3.0",
     "youtube-node": "^1.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "babel-istanbul": "^0.5.9",
+    "chai": "^3.4.1",
+    "coveralls": "^2.11.6",
+    "eslint": "^1.10.3",
+    "eslint-config-busbud": "^0.1.2",
+    "eslint-config-semistandard": "^5.0.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "mocha": "^2.3.4",
+    "nock": "^3.6.0",
+    "nodemon": "^1.8.1",
+    "sinon": "^1.17.2"
+  },
   "scripts": {
-    "start": "node gravebot.js"
+    "start": "babel-node index.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "mocha": "mocha --compilers js:babel-core/register ./tests/index.js",
+    "test": "npm run lint && npm run mocha",
+    "test-coverage": "npm run lint && babel-node node_modules/.bin/babel-istanbul cover --root ./lib --include-all-sources true node_modules/.bin/_mocha -- tests",
+    "dev": "nodemon --exec babel-node ./index.js",
+    "heroku": "forever --minUptime 5000 -c 'babel-node' index.js"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.2.0 <5.0",
+    "npm": "2.14.14"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node4"
+    ]
   },
   "repository": {
     "type": "git",
